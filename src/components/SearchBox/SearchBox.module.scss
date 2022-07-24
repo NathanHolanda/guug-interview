@@ -1,0 +1,11 @@
+.container{
+  padding: 1rem 2rem 0;
+  
+  input{
+    padding: .5rem;
+    border-radius: .25rem;
+    border: .125rem solid var(--orange-500);
+    max-width: 300px;
+    width: 100%;
+  }
+}

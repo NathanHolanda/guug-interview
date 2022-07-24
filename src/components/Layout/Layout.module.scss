@@ -1,0 +1,45 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  width: 100%;
+  max-width: 450px;
+
+  h1,
+  h4 {
+    padding-left: 0;
+  }
+
+  h1 {
+    color: #333;
+    margin-bottom: .25rem;
+  }
+
+  h4 {
+    color: #777;
+    margin-top: .25rem;
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  box-shadow: -3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: -3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: -3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: .5rem;
+}
+
+.listContainer {
+  height: 50vh;
+  overflow: auto;
+  margin: 2rem;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+}

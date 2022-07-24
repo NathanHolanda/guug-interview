@@ -1,14 +1,20 @@
-import React from "react";
+import React, { ReactNode } from "react";
+import styles from "./Button.module.scss";
 
 type ButtonProps = {
-    label: string;
     onClick: () => void;
+    children: ReactNode;
+    type: "error" | "success";
 };
 
-export default function index({ label, onClick }: ButtonProps) {
+export default function Button({ onClick, children, type }: ButtonProps) {
     return (
-        <button type="button" onClick={onClick}>
-            {label}
+        <button
+            className={`${styles.button} ${type ? styles[type] : ""}`}
+            type="button"
+            onClick={onClick}
+        >
+            {children}
         </button>
     );
 }

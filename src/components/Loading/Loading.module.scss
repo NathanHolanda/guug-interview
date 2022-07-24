@@ -1,0 +1,29 @@
+.loading{
+  color: var(--orange-500);
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 6rem;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink{
+  0%{
+    opacity: 1;
+  }
+
+  25%{
+    opacity: .75;
+  }
+
+  50%{
+    opacity: .5;
+  }
+
+  75% {
+    opacity: .75;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}

@@ -1,21 +1,24 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Provider as ReduxProvider } from "react-redux";
 import App from "./App";
-import { AcceptedProvider } from "./hooks/useAccepted";
-import { RefusedProvider } from "./hooks/useRefused";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import { store } from "./store";
+
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
 );
 root.render(
     <React.StrictMode>
-        <AcceptedProvider>
-            <RefusedProvider>
+        <QueryClientProvider client={queryClient}>
+            <ReduxProvider store={store}>
                 <App />
-            </RefusedProvider>
-        </AcceptedProvider>
+            </ReduxProvider>
+        </QueryClientProvider>
     </React.StrictMode>
 );
 

@@ -1,0 +1,22 @@
+.buttonsContainer {
+  button:not(:last-of-type) {
+    margin-right: .25rem;
+  }
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem .25rem;
+
+  p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+    max-width: 15rem;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
